@@ -252,6 +252,9 @@ body {
     left: auto;
     right: 0;
   }
+  .bestsell{
+   margin-left: 465px;
+}
   .mon{
     margin-left: 186px;
     position: absolute;
