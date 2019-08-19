@@ -1,1012 +1,525 @@
-/*
-  /** hide <a href="#">READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
- */
- html {
-  scroll-behavior: smooth;
-}
-@font-face {
-  font-family: "Lato-Regular";
-  src: url(../fonts/Lato-Regular.ttf);
-}
-@font-face {
-  font-family: "Lato-Black";
-  src: url(../fonts/Lato-Black.ttf);
-}
-@font-face {
-  font-family: "Lato-Bold";
-  src: url(../fonts/Lato-Bold.ttf);
-}
-@font-face {
-  font-family: "Lato-Light";
-  src: url(../fonts/Lato-Light.ttf);
-}
-@font-face {
-  font-family: "Lato-Medium";
-  src: url(../fonts/Lato-Medium.ttf);
-}
-@font-face {
-  font-family: "Lato-Semibold";
-  src: url(../fonts/Lato-Semibold.ttf);
-}
-@font-face {
-  font-family: "OpenSans-Bold";
-  src: url(../fonts/OpenSans-Bold.ttf);
-}
-@font-face {
-  font-family: "OpenSans-Regular";
-  src: url(../fonts/OpenSans-Regular.ttf);
-}
-@font-face {
-  font-family: "OpenSans-Semibold";
-  src: url(../fonts/OpenSans-Semibold.ttf);
-}
-p {
-  font-family: "OpenSans-Regular";
-  color: #666666;
-  font-size: 18px;
-}
+<!doctype html>
 
-body {
-  overflow: hidden;
-  overflow-y: auto;
-  font-family: "OpenSans-Regular";
-}
+<html lang="en">
 
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1240px;
-  }
-}
-#gtco-main-nav {
-  padding: 20px 0;
-}
-#gtco-main-nav .navbar-brand {
-  font-size: 36px;
-  font-family: "Lato-Black";
-  text-transform: uppercase;
-  background: -webkit-linear-gradient(left, #db6708, #e94b0d);
-  background: -ms-linear-gradient(left, #db6708, #e94b0d);
-  background: -moz-linear-gradient(left, #db6708, #e94b0d);
-  background: -o-linear-gradient(left, #db6708, #e94b0d);
-  -webkit-background-clip: text;
-  -ms-background-clip: text;
-  -o-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -ms-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
-}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- awesone fonts css-->
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <!-- owl carousel css-->
+    <link rel="stylesheet" href="owl-carousel/assets/owl.carousel.min.css" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Foodoor-Best Food delivery service</title>
+    <style>
 
-#gtco-main-nav .bar1, #gtco-main-nav .bar2, #gtco-main-nav .bar3 {
-  width: 25px;
-  height: 2px;
-  background-color: #db6708;
-  margin: 5px 0;
-  transition: 0.4s;
-  display: block;
-  position: relative;
-}
-#gtco-main-nav .change .bar1 {
-  -webkit-transform: rotate(-42deg) translate(-2px, 6px);
-  transform: rotate(-42deg) translate(-2px, 6px);
-}
-#gtco-main-nav .change .bar2 {
-  opacity: 0;
-}
-#gtco-main-nav .change .bar3 {
-  -webkit-transform: rotate(46deg) translate(-4px, -8px);
-  transform: rotate(46deg) translate(-4px, -8px);
-}
-#gtco-main-nav .navbar-nav li a {
-  font-family: "OpenSans-Regular";
-  font-size: 18px;
-  background: -webkit-linear-gradient(left, #db6708, #e94b0d);
-  background: -ms-linear-gradient(left,   #db6708, #e94b0d);
-  background: -moz-linear-gradient(left,  #db6708, #e94b0d);
-  background: -o-linear-gradient(left,  #db6708, #e94b0d);
-  padding: 3px 10px !important;
-  text-transform: uppercase;
-  color: white;
- 
-}
-#gtco-main-nav form a.btn-info {
-  background:  #e94b0d;
-  border-color: #db6708;
-}
-#gtco-main-nav form a.btn-outline-dark {
-  border-color: #db6708, #e94b0d;
-  background-color: transparent;
-}
-@media (max-width: 991px) {
-  #gtco-main-nav form a.btn-outline-dark {
-    border-color: #e94b0d;
-    color: #e94b0d;
-  }
-}
-#gtco-main-nav::after {
-  position: absolute;
-  content: "";
-  height: 600px;
-  width: 900px;
-  background-image: linear-gradient(-220deg,  white, white);
-  left: 49.5%;
-  top: -50px;
-  z-index: -1;
-  border-radius: 50% 0 50% 50%;
-}
-@media (max-width: 1400px) {
-  #gtco-main-nav::after {
-    height: 550px;
-    width: 800px;
-  }
-}
-@media (max-width: 1199px) {
-  #gtco-main-nav::after {
-    width: 700px;
-  }
-}
-@media (max-width: 991px) {
-  #gtco-main-nav::after {
-    width: 55%;
-    left: auto;
-    right: 0;
-  }
- }
-@media (max-width: 600px) {
-  #gtco-main-nav::after {
-    width: 100%;
-    height: 400px;
-  }
+    </style>
+</head>
 
-}
-#gtco-main-nav::before {
-  position: absolute;
-  content: "";
-  height: 590px;
-  width: 930px;
-  background-image: -webkit-linear-gradient(to right, #e8eefc, #e6fafe);
-  background-image: -moz-linear-gradient(to right, #e8eefc, #e6fafe);
-  background-image: -ms-linear-gradient(to right, #e8eefc, #e6fafe);
-  background-image: -o-linear-gradient(to right, #e8eefc, #e6fafe);
-  background-image: linear-gradient(to right, #e8eefc, #e6fafe);
-  left: 47.5%;
-  top: -25px;
-  z-index: -1;
-  border-radius: 50% 0 50% 50%;
-}
-@media (max-width: 1400px) {
-  #gtco-main-nav::before {
-    height: 540px;
-    width: 810px;
-  }
-  .mon{
-    margin-left: 204px;
-    position: absolute;
-    margin-top: -45px;
-    color: orangered;
-  }
-  .sun{
-    margin-left: 204px;
-    position: absolute;
-    margin-top: -21px;
-    color: orangered;
-  }
-  .pay{
-    margin-left: 389px;
-    position: absolute;
-    margin-top: -44px;
-    color: orangered;
-  }
-  .pod{
-    margin-left: 547px;
-    position: absolute;
-    margin-top: -45px;
-    color: orangered;
-  }
-  .dtime{
-    margin-left: 389px;
-    position: absolute;
-    margin-top: -21px;
-    color: orangered;
-  }
-}
-@media (max-width: 1199px) {
-  #gtco-main-nav::before {
-    width: 710px;
-  }
-  .mon{
-    margin-left: 144px;
-    position: absolute;
-    margin-top: -45px;
-    color: orangered;
-  }
-  .sun{
-    margin-left: 154px;
-    position: absolute;
-    margin-top: -21px;
-    color: orangered;
-  }
-  .pay{
-    margin-left: 389px;
-    position: absolute;
-    margin-top: -44px;
-    color: orangered;
-  }
-  .pod{
-    margin-left: 547px;
-    position: absolute;
-    margin-top: -45px;
-    color: orangered;
-  }
-  .dtime{
-    margin-left: 389px;
-    position: absolute;
-    margin-top: -21px;
-    color: orangered;
-  }
-}
-@media (max-width: 991px) {
-  #gtco-main-nav::before {
-    width: 55%;
-    left: auto;
-    right: 0;
-  }
-  .bestsell{
-   margin-left: 465px;
-}
-  .mon{
-    margin-left: 186px;
-    position: absolute;
-    margin-top: -122px;
-    color: orangered;
-}
-.sun {
-  margin-left: 199px;
-  position: absolute;
-  margin-top: -95px;
-  color: orangered;
-}
-.pay {
-margin-left: 424px;
-position: absolute;
-margin-top: -117px;
-color: orangered;
-}
-.pod {
-margin-left: 581px;
-position: absolute;
-margin-top: -118px;
-color: orangered;
-}
-.dtime {
-margin-left: 429px;
-position: absolute;
-margin-top: -93px;
-color: orangered;
-}
-}
-@media (max-width: 600px) {
-  #gtco-main-nav::before {
-    width: 100%;
-    height: 390px;
-  }
-  .mon{
-    margin-left: 96px;
-    position: absolute;
-    margin-top: -122px;
-    color: orangered;
-}
-.sun {
-  margin-left: 109px;
-  position: absolute;
-  margin-top: -95px;
-  color: orangered;
-}
-.pay {
-margin-left: 334px;
-position: absolute;
-margin-top: -117px;
-color: orangered;
-}
-.pod {
-margin-left: 491px;
-position: absolute;
-margin-top: -118px;
-color: orangered;
-}
-.dtime {
-margin-left: 339px;
-position: absolute;
-margin-top: -93px;
-color: orangered;
-}
-
-}
-
-.gtco-banner-area a, .gtco-feature a, .gtco-features a, .gtco-news .owl-carousel .card a, #gtco-footer .submit-button {
-  background-image: -moz-linear-gradient(0deg, #e94b0dd8 0%, #db6708b2 100%);
-  background-image: -webkit-linear-gradient(0deg, #e94b0dd8 0%, #db6708b2 100%);
-  background-image: -ms-linear-gradient(0deg, #e94b0dd8 0%, #db6708b2 100%);
-  font-size: 18px;
-  font-family: "OpenSans-Semibold";
-  color: #fff;
-  border-radius: 50px;
-  padding: 0px 32px;
-  display: inline-block;
-  text-transform: uppercase;
-  padding-right: 30px;;
-  text-decoration: none !important;
-}
-.gtco-banner-area a .fa, .gtco-feature a .fa, .gtco-features a .fa, .gtco-news .owl-carousel .card a .fa, #gtco-footer .submit-button .fa {
-  background: #fff;
-  border-radius: 50%;
-  height: 32px;
-  width: 32px;
-  color: #db6708b2;
-  font-size: 22px;
-  text-align: center;
-  padding-top: 5px;
-  margin-left: 15px;
-}
-
-.gtco-feature h2, .gtco-features h2 {
-  font-family: "Lato-Regular";
-  color: #000000;
-  font-size: 36px;
-  margin-bottom: 30px;
-}
-
-.card {
-  border: none;
-  background: transparent;
-}
-
-.gtco-banner-area {
-  margin-top: 20px;
-  min-height: 500px;
-}
-.gtco-banner-area h1 {
-  font-family: "Lato-Light";
-  font-size: 48px;
-  color: #000000;
-  max-width: 500px;
-  margin-top: 70px;
-}
-.gtco-banner-area h1 span {
-  font-family: "Lato-Medium";
-}
-@media (max-width: 1199px) {
-  .gtco-banner-area h1 {
-    margin-top: 30px;
-  }
-}
-.gtco-banner-area p {
-  max-width: 450px;
-  margin: 20px 0;
-  margin-bottom: 40px;
-}
-.gtco-banner-area a {
-  display: inline;
-  padding: 10px 30px;
-  padding-right: 5px;
-}
-.gtco-banner-area .col-md-6 .card .card-img-top {
-  max-width: 430px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-right: 0;
-}
-@media (max-width: 1400px) {
-  .gtco-banner-area .col-md-6 .card .card-img-top {
-    max-width: 359px;
-    margin-top: -35px;
-    margin-right: auto;
-  }
-}
-@media (max-width: 1199px) {
-  .gtco-banner-area .col-md-6 .card .card-img-top {
-    max-width: 350px;
-  }
-}
-@media (max-width: 767px) {
-  .gtco-banner-area .col-md-6 .card .card-img-top {
-    margin-top: 100px;
-  }
-    .bestsell{
-   margin-left: 465px;
-}
-}
-
-.gtco-feature {
-  margin-top: 100px;
-}
-.gtco-feature .card .back-bg {
-  margin-left: -30px !important;
-  margin-top: -20px;
-}
-.gtco-feature .card svg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-.gtco-feature .card svg.defs {
-  position: absolute;
-  width: 0;
-  height: 0;
-}
-.gtco-feature .card .squircle {
-  width: 100%;
-  height: 450px;
-  background: url(../images/learn-img.jpg) center/cover, #aaa;
-  clip-path: url(#clip-path);
-  background-position-x: -50px;
-}
-.gtco-feature p small {
-  font-size: 16px;
-}
-.gtco-feature a {
-  margin-top: 3px;
-  display: inline-block;
-}
-
-.gtco-features {
-  margin-top: 100px;
-}
-.gtco-features svg {
-  position: absolute;
-  margin-left: -100px;
-  margin-top: 100px;
-}
-@media (max-width: 767px) {
-  .gtco-features svg {
-    margin: 0 auto;
-    margin-top: 200px;
-  }
-  .mon{
-    margin-left: 159px;
-    position: absolute;
-    margin-top: -122px;
-    font-size: small;
-    color: orangered;
-}
-.sun {
-  margin-left: 159px;
-  position: absolute;
-  margin-top: -95px;
-  font-size: small;
-  color: orangered;
-}
-.pay {
-  margin-left: 336px;
-  position: absolute;
-  margin-top: -119px;
-font-size: small;
-color: orangered;
-}
-.pod {
-  margin-left: 464px;
-  position: absolute;
-  margin-top: -119px;
-font-size: small;
-color: orangered;
-}
-.dtime {
-margin-left: 336px;
-position: absolute;
-margin-top: -93px;
-font-size: small;
-color: orangered;
-}
-
-}
-.gtco-features h2 {
-  margin-top: 200px;
-}
-@media (max-width: 991px) {
-  .gtco-features h2 {
-    margin-top: 0;
-  }
-}
-.gtco-features .col-lg-4 p {
-  max-width: 320px;
-  margin-bottom: 30px;
-}
-.gtco-features .col-lg-8 {
-  padding: 10px 100px;
-}
-@media (max-width: 767px) {
-  .gtco-features .col-lg-8 {
-    padding: 10px 0;
-  }
-}
-.gtco-features .col-lg-8 .row .col:first-child {
-  margin-top: 150px;
-}
-@media (max-width: 600px) {
-  .gtco-features .col-lg-8 .row .col:first-child {
-    margin-top: 50px;
-  }
-}
-@media (max-width: 600px) {
-  .gtco-features .col-lg-8 .col {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-}
-.gtco-features .col-lg-8 .card {
-  background: #fff;
-  margin: 30px 5px;
-  padding: 20px 10px;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.08);
-}
-.gtco-features .col-lg-8 .card .oval {
-  background: linear-gradient(to right, #f1f6fd, #f0fbfe);
-  padding: 10px;
-  width: 150px;
-  border-radius: 50%;
-  margin: auto;
-  transform: rotate(20deg);
-  margin-top: 20px;
-}
-.gtco-features .col-lg-8 .card .card-img-top {
-  max-width: 0.8in;
-  margin: 0 auto;
-  transform: rotate(-20deg);
-}
-.gtco-features .col-lg-8 .card h3 {
-  font-family: "Lato-Regular";
-  font-size: 24px;
-  color: #e94b0d;
-}
-.gtco-features .col-lg-8 .card p {
-  font-size: 16px;
-}
-
-.gtco-numbers-block {
-  margin: 100px auto;
-  margin-top: 200px;
-  color: #fff;
-}
-@media (max-width: 600px) {
-  .gtco-numbers-block {
-    margin-top: 100px;
-  }
-}
-@media (max-width: 1299px) {
-  .gtco-numbers-block .row {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-}
-@media (max-width: 767px) {
-  .gtco-numbers-block .row .col-3 {
-    padding: 0;
-  }
-}
-.gtco-numbers-block #custom-map::before {
-  position: absolute;
-  content: "";
-  height: 100px;
-  width: 100%;
-  border: 2px solid red;
-}
-.gtco-numbers-block svg {
-  margin-top: -100px;
-  position: absolute;
-  left: 0;
-  max-width: 1500px;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (max-width: 1299px) {
-  .gtco-numbers-block svg {
-    margin-top: -90px;
-  }
-}
-@media (max-width: 1199px) {
-  .gtco-numbers-block svg {
-    margin-top: -60px;
-  }
-}
-@media (max-width: 991px) {
-  .gtco-numbers-block svg {
-    margin-top: -40px;
-  }
-}
-@media (max-width: 650px) {
-  .gtco-numbers-block svg {
-    margin-top: -20px;
-  }
-}
-@media (max-width: 600px) {
-  .gtco-numbers-block svg {
-    margin-top: -10px;
-  }
-}
-.gtco-numbers-block h5 {
-  font-family: "Lato-Bold";
-  font-size: 60px;
-}
-@media (max-width: 1299px) {
-  .gtco-numbers-block h5 {
-    font-size: 48px;
-  }
-}
-@media (max-width: 767px) {
-  .gtco-numbers-block h5 {
-    font-size: 24px;
-  }
-}
-@media (max-width: 600px) {
-  .gtco-numbers-block h5 {
-    margin: 0;
-    font-size: 18px;
-  }
-}
-.gtco-numbers-block p {
-  font-family: "Lato-Semibold";
-  font-size: 24px;
-  color: #fff;
-}
-@media (max-width: 1299px) {
-  .gtco-numbers-block p {
-    font-size: 18px;
-  }
-}
-@media (max-width: 991px) {
-  .gtco-numbers-block p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 991px) {
-  .gtco-numbers-block p {
-    font-size: 10px;
-  }
-}
-@media (max-width: 600px) {
-  .gtco-numbers-block p {
-    line-height: 2.1;
-  }
-}
-@media (max-width: 500px) {
-  .gtco-numbers-block p {
-    font-size: 3px;
-  }
-}
-
-.gtco-testimonials {
-  position: relative;
-  margin-top: 200px;
-}
-@media (max-width: 767px) {
-  .gtco-testimonials {
-    margin-top: 100px;
-  }
-}
-.gtco-testimonials h2 {
-  font-family: "Lato-Medium";
-  font-size: 25px;
-  text-align: center;
-  color: #333333;
-  margin-bottom: 100px;
-}
-.gtco-testimonials .owl-stage-outer {
-  padding-bottom: 30px;
-}
-.gtco-testimonials .owl-nav {
-  display: none;
-}
-.gtco-testimonials .owl-dots {
-  text-align: center;
-}
-.gtco-testimonials .owl-dots span {
-  position: relative;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-  display: block;
-  background: #fff;
-  border: 2px solid #db6708b2;
-  margin: 0 5px;
-}
-.gtco-testimonials .owl-dots .active {
-  box-shadow: none;
-}
-.gtco-testimonials .owl-dots .active span {
-  background: #db6708b2;
-  box-shadow: none;
-  height: 12px;
-  width: 12px;
-  margin-bottom: -1px;
-}
-.gtco-testimonials .card {
-  background: #fff;
-  box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.08);
-  margin: 0 30px;
-  padding: 0 20px;
-  border-radius: 50px;
-}
-.gtco-testimonials .card .card-img-top {
-  max-width: 100px;
-  border-radius: 50%;
-  margin: 0 auto;
-  border: 5px solid #e94b0d;
-  width: 100px;
-  height: 100px;
-}
-.gtco-testimonials .card h5 {
-  color: #e94b0d;
-  font-size: 21px;
-  line-height: 1.3;
-  font-family: "Lato-Medium";
-}
-.gtco-testimonials .card h5 span {
-  font-size: 18px;
-  color: #666666;
-  font-family: "OpenSans-Regular";
-}
-.gtco-testimonials .card p {
-  font-size: 18px;
-}
-.gtco-testimonials .active {
-  opacity: 0.5;
-  transition: all 0.3s;
-}
-.gtco-testimonials .center {
-  opacity: 1;
-}
-.gtco-testimonials .center h5 {
-  font-size: 24px;
-}
-.gtco-testimonials .center h5 span {
-  font-size: 20px;
-}
-.gtco-testimonials .center p {
-  font-size: 20px;
-}
-.gtco-testimonials .center .card-img-top {
-  max-width: 100%;
-  height: 120px;
-  width: 120px;
-}
-
-.gtco-features-list {
-  margin-top: 100px;
-}
-.gtco-features-list .media {
-  margin: 20px 0;
-}
-.gtco-features-list .oval {
-  border-radius: 50%;
-  background-color: white;
-  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  height: 60px;
-  width: 60px;
-}
-.gtco-features-list .oval .align-self-start {
-  width: 100%;
-  padding: 3px;
-}
-.gtco-features-list .media-body {
-  font-family: "OpenSans-Regular";
-  font-size: 16px;
-  color: #666666;
-  padding-right: 20px;
-}
-.gtco-features-list .media-body h5 {
-  font-family: "Lato-Semibold";
-  margin-bottom: 20px !important;
-  font-size: 22px;
-}
-
-.gtco-logo-area {
-  margin: 50px auto;
-}
-.gtco-logo-area .col .img-fluid {
-  max-height: 32px;
-}
-@media (max-width: 600px) {
-  .gtco-logo-area .col {
-    flex: 0 0 50%;
-    max-width: 50%;
-    margin: 20px 0;
-  }
-}
-
-.gtco-news {
-  background: #fcfcfc;
-  padding: 0px 0;
-  margin: 100px auto;
-}
-.gtco-news h2 {
-  font-size: 36px;
-  font-weight: "Lato-Medium";
-  text-align: center;
-  margin-bottom: 50px;
-}
-.gtco-news .owl-carousel .owl-nav {
-  display: block !important;
-  position: absolute;
-  top: 25%;
-  width: 100%;
-}
-@media (max-width: 600px) {
-  .gtco-news .owl-carousel .owl-nav {
-    display: none !important;
-  }
-}
-.gtco-news .owl-carousel .owl-nav .owl-prev, .gtco-news .owl-carousel .owl-nav .owl-next {
-  font-size: 120px;
-  color: #666666;
-  position: absolute;
-}
-.gtco-news .owl-carousel .owl-nav .owl-prev {
-  left: -50px;
-}
-.gtco-news .owl-carousel .owl-nav .owl-next {
-  right: -50px;
-}
-.gtco-news .owl-carousel .card {
-  padding: 0 25px;
-}
-.gtco-news .owl-carousel .card .card-img-top {
-  border-radius: 40px;
-  box-shadow: 0 10px 20px 0 (left,  #db6708, #e94b0d);
-}
-.card-image{
-  width: 200px;
-  height: 130px;
-  border-radius: 14px;
-}
-.gtco-news .owl-carousel .card h5 {
-  font-family: "Lato-Medium";
-  font-size: 22px;
-  color: #333333;
-  margin-bottom: 20px;
-}
-@media (max-width: 767px) {
-  .gtco-news .owl-carousel .card h5 {
-    font-size: 18px;
-  }
-}
-.gtco-news .owl-carousel .card p {
-  font-size: 17px;
-}
-@media (max-width: 767px) {
-  .gtco-news .owl-carousel .card p {
-    font-size: 15px;
-  }
-}
-.gtco-news .owl-carousel .card a {
-  padding-top: 3px !important;
-  padding-bottom: 3px !important;
-}
-
-#gtco-footer {
-  padding-bottom: 20px;
-}
-#gtco-footer h4 {
-  font-family: "Lato-Medium";
-  font-size: 24px;
-  color: #e94b0d;
-  margin-bottom: 30px;
-}
-#gtco-footer input, #gtco-footer textarea {
-  background-color: white;
-  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.08);
-  border-radius: 50px;
-  max-width: 450px;
-  width: 100%;
-  height: 60px;
-  border: none;
-  margin-bottom: 30px;
-  padding-left: 30px;
-  color: #000;
-}
-#gtco-footer input::-webkit-input-placeholder, #gtco-footer input::-moz-placeholder, #gtco-footer input:-ms-input-placeholder, #gtco-footer input:-moz-placeholder, #gtco-footer textarea::-webkit-input-placeholder, #gtco-footer textarea::-moz-placeholder, #gtco-footer textarea:-ms-input-placeholder, #gtco-footer textarea:-moz-placeholder {
-  color: #999999;
-  font-family: "OpenSans-Regular";
-  font-size: 18px;
-}
-#gtco-footer textarea {
-  min-height: 200px;
-  border-radius: 30px;
-  padding-top: 20px;
-  padding-right: 20px;
-  resize: none;
-}
-#gtco-footer .company-nav, #gtco-footer .services-nav {
-  font-family: "OpenSans-Regular";
-  font-size: 20px;
-}
-#gtco-footer .company-nav a, #gtco-footer .services-nav a {
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light bg-transparent" id="gtco-main-nav">
+        <div class="container"><img src="images/foodoor logo.jpeg" class="navbar-brand"     width=88px>
+            <button class="navbar-toggler" data-target="#my-nav" onclick="myFunction(this)" data-toggle="collapse"><span
+                    class="bar1"></span> <span class="bar2"></span> <span class="bar3"></span></button>
+            <div id="my-nav" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">How it works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Restaurants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">FAQ's</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+               </div>
+                           </div>
+    </nav>
+    <br>
+      <div class="hidden-xs">
+    <span class="pll mbs bold mon">
+        <i class="fa fa-check-circle pos-absolute"></i>
+        Mon-Fri, 9:00 am - 8:30 pm
+    </span>
+    <h6 class="pll mtn sun">Saturday, 12.00 am - 8:30 pm</h6>
+    </div>
   
-  margin: 0;
-  padding: 0;
-  border-radius:none;
 
-}
-#gtco-footer .follow-us-nav a {
-  padding: 0 10px;
- 
-}
-@media (max-width: 385px) {
-  #gtco-footer .follow-us-nav a {
-    padding-right: 0;
-  }
-}
-#gtco-footer .follow-us-nav a .fa {
-  font-size: 24px;
-}
-#gtco-footer .col-12 {
-  margin-top: 90px;
-}
-#gtco-footer .col-12 p {
-  font-family: "Lato-Regular";
-  font-size: 18px;
-  color: #999999;
-}
-@media (max-width: 991px) {
-  #gtco-footer .col-12 {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 991px) {
-  #gtco-footer .col-lg-6 {
-    margin-bottom: 50px;
-  }
-}
-.upcontain{
-  width: 100%;
-  height: 46%;
-}
-.headline{
-  margin-left: 42%;
-}
-#title{
-  color: #e94b0d;
-  font-weight: 900;
-  font-size: 15px;
-  word-spacing: 1px;
-  margin-bottom: 1rem;
+    <div class="container-fluid gtco-banner-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1> FAST FOOD
+                        MADE EASY AT <span>FOODOOR</span> FOR
+                        YOUR COMFORT. </h1>
+                    <p> Order food and have it delivered in no time. </p>
+                    <a href="https://wa.me/2349093547621?text=I%20want%20to%20order%20for%20food">Order Now <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="col-md-6">
+                    <div class="card"><img class="card-img-top img-fluid" src="images/Home-Food-Delivery-Apps-In-India.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid gtco-feature" id="services">
+        <div class="container">
+            <h3 style="margin-left: 118px;">Best Selling</h3>
+            <br>
+            <a onclick="myFunction()" style="margin-bottom: 26px;line-height:0;margin-left: 135px;color: #7c7c80;cursor: pointer;" >YAHUZA</a>
+            <div class="headline2" ></div>
+            <br>
+            <div id="myDIV">
+            <div class="row">
+                    <div class="col sm4 xs-4">
+                        <img src="images/chicken.JPG" width="200px" height="225px" class="card-image">
+                        <div class="card-body">
+                            <p>
+                                <span class="card-title" id="title">CHICKEN PART <span
+                                        class="price"> &#x20A6; 700</span></span>
+                                </p>
+                        </div>
+                    </div>
+                    <div class="col sm4 xs-4">
+                        <img src="images/gizzard.jpg" width="200px" height="225px" class="card-image">
+                        <div class="card-body">
+                            <p>
+                                <span class="card-title" id="title">GIZZARD <span class="price"> &#x20A6; 300</span></span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col sm4">
+                        <div class="col sm4 xs-4">
+                            <img src="images/liver.jpg" width="200px" height="225px" class="card-image">
+                            <div class="card-body">
+                                <p>
+                                    <span class="card-title" id="title">LIVER <span class="price"> &#x20A6; 200</span></span>
+    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="row">
+                <div class="col sm4 xs-4">
+                    <img src="images/beef.jpg" width="200px" height="225px" class="card-image">
+                    <div class="card-body">
+                        <p>
+                            <span class="card-title" id="title">BEEF <span
+                                    class="price">&#x20A6; 300</span></span>
+                            </p>
+                    </div>
+                </div>
+                <div class="col sm4 xs-4">
+                    <img src="images/kidney.jpg" width="200px" height="225px" class="card-image">
+                    <div class="card-body">
+                        <p>
+                            <span class="card-title" id="title"> KIDNEY<span class="price"> &#x20A6; 200</span></span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col sm4">
+                    <div class="col sm4 xs-4">
+                        <img src="images/masa.jpg" width="200px" height="225px" class="card-image">
+                        <div class="card-body">
+                            <p>
+                                <span class="card-title" id="title">MASA <span class="price"> &#x20A6; 100</span></span>
 
-}
-.content h1{
-  position: absolute;
-  margin-left: 28px;
-  font-weight: bold;
-  margin-top: 56px;
-  color: white;
-  font-size: 25px;
-}
-.content p{
-  position: absolute;
-  margin-left: 43px;
-  color: rgb(252, 252, 252);
-  font-size: 13px;
-  margin-top: 99px;
-}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container-fluid gtco-features" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2> How
+                            It Works </h2>
+                        <p> We partner with popular restaurants to give you standard veriety with our unique
+                            delivery structure.
+                            You're just an order away! </p>
+                        <a href="#">Order now <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-lg-8">
+                        <svg id="bg-services" width="100%" viewBox="0 0 1000 800">
+                            <defs>
+                                <linearGradient id="PSgrad_02" x1="64.279%" x2="0%" y1="76.604%" y2="0%">
+                                    <stop offset="0%" stop-color="rgb(1,230,248)" stop-opacity="1" />
+                                    <stop offset="100%" stop-color="rgb(29,62,222)" stop-opacity="1" />
+                                </linearGradient>
+                            </defs>
+                            <path fill-rule="evenodd" opacity="0.102" fill="url(#PSgrad_02)"
+                                d="M801.878,3.146 L116.381,128.537 C26.052,145.060 -21.235,229.535 9.856,312.073 L159.806,710.157 C184.515,775.753 264.901,810.334 338.020,792.380 L907.021,652.668 C972.912,636.489 1019.383,573.766 1011.301,510.470 L962.013,124.412 C951.950,45.594 881.254,-11.373 801.878,3.146 Z" />
+                        </svg>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card text-center">
+                                    <div class="oval"><img class="card-img-top" src="images/onlinebuy.svg" alt=""></div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">Place your order</h3>
+                                        <p class="card-text">Place your order via Whatsapp massenger or Phone call
+                                            .</p>
+                                    </div>
+                                </div>
+                                <div class="card text-center">
+                                    <div class="oval"><img class="card-img-top" src="images/prepare.svg" alt=""></div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">Food getting ready</h3>
+                                        <p class="card-text">The restaurant is notified to package your food
+                                            .</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card text-center">
+                                    <div class="oval"><img class="card-img-top" src="images/delivar.svg" alt=""></div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">Food's on it way</h3>
+                                        <p class="card-text">Your food will be delivered to your door step
+                                            .</p>
+                                    </div>
+                                </div>
+                                <div class="card text-center">
+                                    <div class="oval"><img class="card-img-top" src="images/eating.svg" alt=""></div>
+                                    <div class="card-body">
+                                        <h3 class="card-title">Enjoy your food</h3>
+                                        <p class="card-text">Enjoy your food in the comfort of your home or office
+                                            .</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid gtco-numbers-block">
+            <div class="container">
+                <svg width="100%" viewBox="0 0 1600 400">
+                    <defs>
+                        <linearGradient id="PSgrad_03" x1="80.279%" x2="0%" y2="0%">
+                            <stop offset="0%" stop-color="#e94b0dd8" stop-opacity="1" />
+                            <stop offset="100%" stop-color="#db6708b2" stop-opacity="1" />
 
-.price{
-  color: #666666;
-  font-size: 18px;
-}
-.headline{
-  margin-left: 472px;
-  width: 124px;
-  height: 2px;
-  margin-top: -8px;
-  background-color: #e97c41;
-}
-.headline2{
-    margin-left: 172px;
-    width: 65px;
-    height: 2px;
-    margin-top: -17px;
-    background-color: #e97c41;
-}
-.follows{
-  display: contents;
-}
+                        </linearGradient>
+
+                    </defs>
+                    <!-- <clipPath id="clip-path3">
+
+                                      </clipPath> -->
+
+                    <path fill-rule="evenodd" fill="url(#PSgrad_03)"
+                        d="M98.891,386.002 L1527.942,380.805 C1581.806,380.610 1599.093,335.367 1570.005,284.353 L1480.254,126.948 C1458.704,89.153 1408.314,59.820 1366.025,57.550 L298.504,0.261 C238.784,-2.944 166.619,25.419 138.312,70.265 L16.944,262.546 C-24.214,327.750 12.103,386.317 98.891,386.002 Z">
+                    </path>
+
+                    <clipPath id="ctm" fill="none">
+                        <path
+                            d="M98.891,386.002 L1527.942,380.805 C1581.806,380.610 1599.093,335.367 1570.005,284.353 L1480.254,126.948 C1458.704,89.153 1408.314,59.820 1366.025,57.550 L298.504,0.261 C238.784,-2.944 166.619,25.419 138.312,70.265 L16.944,262.546 C-24.214,327.750 12.103,386.317 98.891,386.002 Z">
+                        </path>
+                    </clipPath>
+
+                    <!-- xlink:href for modern browsers, src for IE8- -->
+                    <image clip-path="url(#ctm)" xlink:href="images/word-map.png" height="800px" width="100%"
+                        class="svg__image">
+
+                    </image>
+
+                </svg>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">0</h5>
+                                <p class="card-text">Active Customers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">0</h5>
+                                <p class="card-text">Foodoor Growth</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">0</h5>
+                                <p class="card-text">Completed Delivery</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">1</h5>
+                                <p class="card-text">Available Restaurants</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid gtco-testimonials">
+            <div class="container">
+                <h2>What our customers say about us.</h2>
+                <div class="owl-carousel owl-carousel1 owl-theme">
+                    <div>
+                        <div class="card text-center"><img class="card-img-top" src="images/customer1.jpg" alt="">
+                            <div class="card-body">
+                                <h5>Lisa Gally <br />
+                                    <span> Project Manager </span></h5>
+                                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                                    nihil
+                                    impedit quo minus id quod maxime placeat ” </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card text-center"><img class="card-img-top" src="images/customer2.jpg" alt="">
+                            <div class="card-body">
+                                <h5>Missy Limana<br />
+                                    <span> Project Manager </span></h5>
+                                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                                    nihil
+                                    impedit quo minus id quod maxime placeat ” </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card text-center"><img class="card-img-top" src="images/customer3.jpg" alt="">
+                            <div class="card-body">
+                                <h5>Aana Brown<br />
+                                    <span> Project Manager </span></h5>
+                                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                                    nihil
+                                    impedit quo minus id quod maxime placeat ” </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="card text-center"><img class="card-img-top" src="images/customer3.jpg" alt="">
+                            <div class="card-body">
+                                <h5>Aana Brown<br />
+                                    <span> Project Manager </span></h5>
+                                <p class="card-text">“ Nam libero tempore, cum soluta nobis est eligendi optio cumque
+                                    nihil
+                                    impedit quo minus id quod maxime placeat ” </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid gtco-news" id="news">
+            <div class="container">
+                <h2>FAQ's</h2>
+                <div class="owl-carousel owl-carousel2 owl-theme">
+                        <div>
+                                <div class="card text-center"><img class="card-img-top" src="images/food vendor.jpg" alt="" height="200px">
+                                    <div class="card-body text-left pr-0 pl-0">
+                                        <h5>Are you a food vendor? </h5>
+                                        <p class="card-text"> Do you want your restaurant listed on Foodoor or have questions regarding our service?
+                                             You can always send an email to: foodoor77@gmail.com or call us on +2349093547621</p>
+                                       </div>
+                                </div>
+                            </div>
+                            <div>
+                                    <div class="card text-center"><img class="card-img-top" src="images/news2.jpg" alt="" height="200px">
+                                        <div class="card-body text-left pr-0 pl-0">
+                                            <h5>Do you need our Corporate Service?</h5>
+                                            <p class="card-text">Foodoor helps you treat your employees to the best lunch delivery available in Nigeria. For more information,
+                                                contact us via corporate. foodoor77@gmail.com or call us on +2349093547621.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div>
+                                    <div class="card text-center"><img class="card-img-top" src="images/cash-on-delivery-process.jpg" alt="" height="200px">
+                                        <div class="card-body text-left pr-0 pl-0">
+                                            <h5>Cash on delivery? </h5>
+                                            <p class="card-text">At this point of writing (10/08/2019), we do not accept cash on delivery. 
+                                                Exception are considered only 
+                                                for frequent users or where the available payment options fail. 
+                                                You are free to call us on +2349093547621 for more enquires</p>
+                                            </div>
+                                    </div>
+                                </div>
+                    <div>
+                        <div class="card text-center"><img class="card-img-top" src="images/FAQ-myorder.jpg" alt="" height="200px">
+                            <div class="card-body text-left pr-0 pl-0">
+                                <h5>What happens when i place an order? </h5>
+                                <p class="card-text">After you place your order,we start handling it right away.
+                                    We do all that we can to get your food delivered as quickly as possible.
+                                     However, sometimes restaurants receive very large amount of orders, 
+                                     or drivers get stuck in heavy traffic - this unfortunately might cause delays.
+                                      If the amount of time you’ve waited has exceeded the estimated delivery time 
+                                      which is usually within 30-45 Minutes, you can contact us and we’ll look into what’s going on.
+                                   </p>
+                              
+                            </div>
+                        </div>
+                    </div>
+                     <div>
+                        <div class="card text-center"><img class="card-img-top" src="images/advice-for-how-to-order-food-online-2-638.jpg" alt="" height="200px">
+                            <div class="card-body text-left pr-0 pl-0">
+                                <h5> How to order online? </h5>
+                                <p class="card-text">        There are three (6) steps. <br>
+
+                               <br> 1. Call us to order or chat us via Whatsapp messenger <br>
+                                
+                               <br> 2. Location: Tell us your area you want your food delivered <br>
+                                
+                               <br> 3. Select: Pick a restaurant and go through the variety of meals on their menu at <a href="foodoor.com.ng">Foodoor</a> before placing your order <br>
+                                
+                                <br> 4. Checkout: your bill will be sent to you via text message <br>
+                                
+                               <br> 5. Payment: Make the exact payment via the available payment options <br>
+                                
+                               <br> 6.Relax: Your order is on the way.</p>
+                                </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+                    <div class="container-fluid gtco-features-list">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="media col-md-6 col-lg-4">
+                                        <div class="oval mr-4"><img class="align-self-start" src="images/terms-and-conditions.svg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="mb-0">Terms and Conditions</h5>
+                                            Please carefully read the terms and conditions ("Terms and Conditions") below before 
+                                            placing any order for any of the Goods or Services from http://www.foodoor.com.ng
+                                             By placing an order for any of the Goods or Services from this Website, whereas it is by phone, 
+                                             through our mobile applications or
+                                             by any other available channel, you agree to be bound by these Terms and Conditions..
+                                        </div>
+                                    </div>
+                                    <div class="media col-md-6 col-lg-4">
+                                        <div class="oval mr-4"><img class="align-self-start" src="images/about-us-svgrepo-com.svg" alt=""></div>
+                                        <div class="media-body">
+                                            <h5 class="mb-0">About Foodoor.ng</h5>
+                                           foodoor.com.ng is startup that Companies and prides itself on the consistent 
+                                            delivery of product excellence, great value and impeccable customer service bent on solving people problem.
+                                        </div>
+                                    </div>
+                                    <div class="media col-md-6 col-lg-4">
+                                        <div class="oval mr-4"><img class="align-self-start" src="images/book.svg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="mb-0">Definitions</h5>
+                                            "Customer”, “You", "your" and "yours" are references to you, the customer, 
+                                            accessing this Website, and placing the orders for the Goods or Services we display on it.
+                                             Access through any other channel provided by foodoor.com.ng will also bound you to these Terms and Conditions;
+                                        </div>
+                                    </div>
+                                    <div class="media col-md-6 col-lg-4">
+                                        <div class="oval mr-4"><img class="align-self-start" src="images/checked-tick-svgrepo-com.svg" alt=""></div>
+                                        <div class="media-body">
+                                            <h5 class="mb-0">Ordering</h5>
+                                            By placing an order through our Website, you enter into an agreement with foodoor.com.ng
+                                             with respect to the processing of that order and forwarding it to the Participating 
+                                             Restaurant. If you are paying via transfer, foodoor.com.ng is also responsible for any returns 
+                                             or refunds. However, the Restaurant remains responsible for the preparation, 
+                                             quality and delivery of your order. You agree to take particular care when providing
+                                              us with your details and warrant that these details are accurate and complete at the time of ordering.
+                                              
+                                        </div>
+                                    </div>
+                                    <div class="media col-md-6 col-lg-4">
+                                        <div class="oval mr-4"><img class="align-self-start" src="images/connection.svg" alt=""></div>
+                                        <div class="media-body">
+                                            <h5 class="mb-0">Terms of website use</h5>
+                                            By using our site, you indicate that you accept these terms of use and that you agree to abide by them.
+                                             If you do not agree to these terms of use, please refrain from using this site.
+                                        </div>
+                                    </div>
+                                    <div class="media col-md-6 col-lg-4">
+                                        <div class="oval mr-4"><img class="align-self-start" src="images/right-arrow-next-button-svgrepo-com.svg"
+                                                alt=""></div>
+                                        <div class="media-body">
+                                            <h5 class="mb-0">Rights and Obligations</h5>
+                                            Pricing: Regarding delivery prices, foodoor.com.ng has the right to make changes 
+                                            depending on the circumstances surrounding each delivery. However, pricing of 
+                                            any meal as referenced on our website or by any of our staff over the phone or 
+                                            any other means provided by the restaurants remain unedited until officially changed.
+                                            Delay and Damanged Goods:foodoor.com.ng and it's staff are trained in 
+                                            handling orders in the most hygienic and professional way from the time of 
+                                            receiving the order to it's delivery tot the end user. However in the event of 
+                                            any form of accident or mistaken order, foodoor.ng takes full responsibility.
+                                             For delays beyond the '45-minutes' delivery mark,
+                                             may choose to compensate the customer on the next delivery
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid" id="gtco-footer">
+                                <div class="container">   
+                                    <div class="row">
+                                        <div class="col-lg-6" id="contact">
+                                            <h4> Have a Sugestions? </h4>
+                                            <input type="text" class="form-control" placeholder="Full Name">
+                                            <input type="email" class="form-control" placeholder="Email Address">
+                                            <textarea class="form-control" placeholder="Message"></textarea>
+                                             <a href="#">SUBMIT<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                        </div>
+                                        </div>
+                    <footer class="container-fluid" id="gtco-footer">
+                        <div class="row follows">
+                                 <h4 class="mt-5">Fllow Us</h4>
+                                <ul class="nav follow-us-nav">
+                                    <li class="nav-item"><a class="nav-link pl-0" href="http://fb.me/foodoor77"><i class="fa fa-facebook"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-twitter"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-google"
+                                                aria-hidden="true"></i></a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-linkedin"
+                                                aria-hidden="true"></i></a></li>
+                                                
+                                </ul>
+                                
+                               
+                            </div>
+                            <div class="col-12">
+                                <p>&copy; 2019. All Rights Reserved..</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <!-- owl carousel js-->
+        <script src="owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+                function myFunction() {
+                  var x = document.getElementById("myDIV");
+                  if (x.style.display === "none") {
+                    x.style.display = "block";
+                    x.style.transition= "0.6";
+                    x.style.transition="width 10s";
+                  } else {
+                    x.style.display = "none";
+                    x.style.transition="width 2s";
+                  }
+                }
+                </script>
+</body>
+
+</html>
