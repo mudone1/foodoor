@@ -1,6 +1,4 @@
 /*
- * Solution by GetTemplates.co
- * URL: https://GetTemplates.co
   /** hide <a href="#">READ MORE <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
  */
  html {
@@ -181,13 +179,13 @@ body {
     width: 810px;
   }
   .mon{
-    margin-left: 144px;
+    margin-left: 204px;
     position: absolute;
     margin-top: -45px;
     color: orangered;
   }
   .sun{
-    margin-left: 154px;
+    margin-left: 204px;
     position: absolute;
     margin-top: -21px;
     color: orangered;
@@ -464,14 +462,14 @@ color: orangered;
     margin-top: 200px;
   }
   .mon{
-    margin-left: 118px;
+    margin-left: 159px;
     position: absolute;
     margin-top: -122px;
     font-size: small;
     color: orangered;
 }
 .sun {
-  margin-left: 118px;
+  margin-left: 159px;
   position: absolute;
   margin-top: -95px;
   font-size: small;
@@ -663,17 +661,17 @@ color: orangered;
 }
 @media (max-width: 991px) {
   .gtco-numbers-block p {
-    font-size: 16px;
+    font-size: 10px;
   }
 }
 @media (max-width: 600px) {
   .gtco-numbers-block p {
-    line-height: 1.1;
+    line-height: 2.1;
   }
 }
 @media (max-width: 500px) {
   .gtco-numbers-block p {
-    font-size: 8px;
+    font-size: 3px;
   }
 }
 
@@ -688,7 +686,7 @@ color: orangered;
 }
 .gtco-testimonials h2 {
   font-family: "Lato-Medium";
-  font-size: 36px;
+  font-size: 25px;
   text-align: center;
   color: #333333;
   margin-bottom: 100px;
@@ -819,7 +817,7 @@ color: orangered;
 
 .gtco-news {
   background: #fcfcfc;
-  padding: 50px 0;
+  padding: 0px 0;
   margin: 100px auto;
 }
 .gtco-news h2 {
@@ -858,7 +856,7 @@ color: orangered;
   box-shadow: 0 10px 20px 0 (left,  #db6708, #e94b0d);
 }
 .card-image{
-  width: 228px;
+  width: 200px;
   height: 130px;
   border-radius: 14px;
 }
