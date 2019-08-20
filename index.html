@@ -138,7 +138,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <h2> How
-                            It Work </h2>
+                            It Works </h2>
                         <p> We partner with popular restaurants to give you standard veriety with our unique
                             delivery structure.
                             You're just an order away! </p>
@@ -178,7 +178,7 @@
                                 <div class="card text-center">
                                     <div class="oval"><img class="card-img-top" src="images/delivar.svg" alt=""></div>
                                     <div class="card-body">
-                                        <h3 class="card-title">Food on it way</h3>
+                                        <h3 class="card-title">Food's on it way</h3>
                                         <p class="card-text">Your food will be delivered to your door step
                                             .</p>
                                     </div>
@@ -467,10 +467,11 @@
                                     <div class="row">
                                         <div class="col-lg-6" id="contact">
                                             <h4> Have a Sugestions? </h4>
-                                            <input type="text" class="form-control" placeholder="Full Name">
-                                            <input type="email" class="form-control" placeholder="Email Address">
-                                            <textarea class="form-control" placeholder="Message"></textarea>
-                                             <a href="#">SUBMIT<i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                                            <input type="text" id="fullname" class="form-control" placeholder="Full Name">
+                                            <input type="email" id="email" class="form-control" placeholder="Email Address">
+                                            <textarea class="form-control" id="message" placeholder="Message"></textarea>
+                                             <!-- <a href="#">SUBMIT<i class="fa fa-angle-right" aria-hidden="true"></i></a> -->
+                                            <button type="submit" id="send_message" class="fa fa-angle-right">SUBMIT</button>
                                         </div>
                                         </div>
                     <footer class="container-fluid" id="gtco-footer">
@@ -499,6 +500,8 @@
             </div>
         </footer>
 
+        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="js/jquery-3.3.1.slim.min.js"></script>
@@ -519,7 +522,44 @@
                     x.style.transition="width 2s";
                   }
                 }
-                </script>
+
+    var firebaseConfig = {
+        apiKey: "AIzaSyDHpuNeJrX38DSrdvi5j8j_zLeifFParaI",
+        authDomain: "foodoor-fa81e.firebaseapp.com",
+        databaseURL: "https://project-id.firebaseio.com",
+        projectId: "foodoor-fa81e"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+
+            
+    
+    $('button#send_message').on('click', function() {
+        
+
+        $fullname = $('#fullname');
+        $email = $('#email');
+        $message = $('#message');
+
+        fullname = fullname.value;
+        email = email.value;  
+        message = message.value;
+
+        // dont forget to validate your form
+        console.log(fullname, email, message);
+
+        db.collection("cantact_messages").add({
+            fullname: fullname,
+            email: email,
+            message: message
+        });
+
+        console.log('message sent');
+    });
+
+    </script>
+
 </body>
 
 </html>
