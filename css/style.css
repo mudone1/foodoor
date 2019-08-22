@@ -1010,3 +1010,9 @@ color: orangered;
 .follows{
   display: contents;
 }
+@media (max-width: 477px){
+.one{
+  flex-wrap: nowrap;
+
+}
+}
