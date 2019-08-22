@@ -462,14 +462,14 @@ color: orangered;
     margin-top: 200px;
   }
   .mon{
-    margin-left: 159px;
+    margin-left: 117px;
     position: absolute;
     margin-top: -122px;
     font-size: small;
     color: orangered;
 }
 .sun {
-  margin-left: 159px;
+  margin-left: 117px;
   position: absolute;
   margin-top: -95px;
   font-size: small;
@@ -1012,7 +1012,10 @@ color: orangered;
 }
 @media (max-width: 477px){
 .one{
-  flex-wrap: nowrap;
-
+  width: 100%;
+  max-width: 234px;
+  height: 811px;
+  display: grid;
+  float: left;
 }
 }
